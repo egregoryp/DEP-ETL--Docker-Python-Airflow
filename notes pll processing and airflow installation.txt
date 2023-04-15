@@ -1,0 +1,44 @@
+Libraries for Distributed processing
+- spark
+--- simple Alternatives, spark is more powerful because of the hardware configured
+- dask
+- polars
+
+#with container id
+docker exec -it e60c4c23d4742ec8a31f7e6a20649acbcf12362a437922eb6016fe16420c8342 bash
+
+#to Install airflow:
+python -m venv airflow 
+
+#inside container jupyter
+source airflow/bin/activate 
+export AIRFLOW_HOME=~/airflow 
+pip install apache-airflow 
+airflow db init 
+airflow users create -e admin@example.org -f Elias -l Pena_Test -p admin -r Admin -u admin 
+airflow webserver -p 8080 
+
+#to access the console is: localhost:8210
+airflow scheduler 
+
+#In another terminal to avoid airflow default dags error
+pip install pandas
+
+#in root folder airflow/dags is the same we have in python/dags that we mount in docker compose
+#in root we have the airflow.cfg
+
+#install all modules install in docker compose
+
+apt-get install vim
+pip install apache-airflow
+
+in /root/airflow 
+edit airflow.cfg and change to LocalExecutor and database to use a new airflow database in mysql
+
+for SQL server we need to install in mysql server
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
+apt-get update
+apt-get install -y msodbcsql17
+
+pip install pyodbc

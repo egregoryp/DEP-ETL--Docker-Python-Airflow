@@ -1,0 +1,20 @@
+database:
+  host: "000.000.000.000"
+  user: "user"
+  pass: "pwd"
+  port: "3310"
+  
+databasems:
+  host: "server"
+  user: "user"
+  pass: "pwd"
+  port: "1433"  
+    
+mongo_db:
+  MONGODB_CONN_STR: "mongodb+srv..."
+    
+cloud_storage:  
+  GCP_CONC_BUCKET: "bucktet.json"
+    
+azure_storage:  
+  AZURE_CONN_STR: "BlobEndpoint=..."

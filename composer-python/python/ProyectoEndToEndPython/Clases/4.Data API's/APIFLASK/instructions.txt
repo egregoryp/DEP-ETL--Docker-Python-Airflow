@@ -1,0 +1,10 @@
+#to run flask
+flask run --host=0.0.0.0 --port=5000
+
+#connect with in browser
+localhost:5100
+
+#to create tables from models
+flask shell
+from app import db
+db.create_all()

@@ -1,0 +1,14 @@
+database:
+  host: "localhost"
+  user: "user"
+  pass: "pwd"
+  port: "3306"
+    
+mongo_db:
+  connection_string: "string"
+    
+cloud_storage:
+  credentials: "path/key.json"
+    
+azure_storage:
+  connection_String: "string"
